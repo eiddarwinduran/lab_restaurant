@@ -16,5 +16,5 @@ export class UsuarioEntity {
   email: string;
 
   @OneToMany(() => PedidoEntity, pedido => pedido.usuarios)
-  pedido: PedidoEntity[];
+  pedido: PedidoEntity[]; //estamos en avance 
 }
