@@ -22,8 +22,8 @@ import { PedidoModule } from './pedido/pedido.module';
       autoLoadEntities: true
     }),
 
-    UsuarioModule,
     PedidoModule,
+    UsuarioModule,
   ],
   controllers: [AppController],
   providers: [AppService],
