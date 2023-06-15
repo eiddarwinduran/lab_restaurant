@@ -6,8 +6,8 @@ export class PedidoEntity {
   @PrimaryGeneratedColumn()
   id: number;
   
-  @Column({name: 'nombre_usuario'})
-  nombreUsuario:string;
+  @Column({name: 'id_usuario'})
+  idUsuario:string;
 
   @Column()
   direccion: string;
@@ -19,6 +19,6 @@ export class PedidoEntity {
   cantidad:string;
 
   @ManyToOne(() => UsuarioEntity, (usuarios) => usuarios.pedido)
-  @JoinColumn({ name: 'nombre_usuario', referencedColumnName: 'id' })
+  @JoinColumn({ name: 'id_usuario', referencedColumnName: 'id' })
   usuarios: UsuarioEntity;
 }
