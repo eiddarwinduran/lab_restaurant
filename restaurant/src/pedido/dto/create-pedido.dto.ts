@@ -9,7 +9,7 @@ export class CreatePedidoDto {
     readonly nombreProducto: string;
 
     @ApiProperty()
-    @IsNotEmpty({message:'el campo de cantidad no debe estar vacion'})
+    @IsNotEmpty({message:'el campo de cantidad no debe estar vacio'})
     @IsNumber({})
     readonly cantidad:number;
 

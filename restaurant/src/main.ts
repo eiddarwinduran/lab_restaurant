@@ -13,9 +13,9 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('SIS257')
-    .setDescription('Examen de Segundo Parcial')
+    .setDescription('Presentacion de Laboratorio')
     .setVersion('1.0')
-    .addTag('Series')
+    .addTag('Pedidos')
     .addBearerAuth({ type: 'http', scheme: 'bearer', bearerFormat: 'JWT', in: 'header' })
     .build();
   const document = SwaggerModule.createDocument(app, config);

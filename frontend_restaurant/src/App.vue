@@ -5,15 +5,15 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/logotipo-estilo-vintage-retro-restaurante_642964-120.avif" width="200" height="200" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Restaurante el Pollo Loco" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/pedido">Pedido</RouterLink>
+        <RouterLink to="/">Principal</RouterLink>
+        <RouterLink to="/about">Platos</RouterLink>
+        <RouterLink to="/pedido">Pedido Realizados</RouterLink>
       </nav>
     </div>
   </header>
