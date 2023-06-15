@@ -26,7 +26,7 @@ async hashPassword() {
 async validatePassword(plainPassword: string): Promise<boolean> {
   return bcrypt.compare(plainPassword, this.clave);
 }
-@OneToMany(() => PedidoEntity, pedido => pedido.usuarios)
-  pedido: PedidoEntity[];
+//@OneToMany(() => PedidoEntity, pedido => pedido.usuarios)
+  //pedido: PedidoEntity[];
   
 }
