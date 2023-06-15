@@ -58,7 +58,7 @@ onMounted(() => {
       <form @submit.prevent="editarPedido">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" v-model="direccion" placeholder="Direccion" required />
-          <label for="nombre">Direccion</label>
+          <label for="direccion">Direccion</label>
         </div>
         <div class="form-floating">
           <input
@@ -68,17 +68,17 @@ onMounted(() => {
             placeholder="Nombre del pedido"
             required
           />
-          <label for="nacionalidad">Nombre del pedido</label>
+          <label for="nombreProducto">Nombre del pedido</label>
         </div>
         <div class="form-floating">
           <input
-            type="text"
+            type="number"
             class="form-control"
             v-model="cantidad"
             placeholder="Cantidad"
             required
           />
-          <label for="nacionalidad">Cantidad</label>
+          <label for="cantidad">Cantidad</label>
         </div>
         <div class="text-center mt-3">
           <button type="submit" class="btn btn-primary btn-lg">Guardar</button>

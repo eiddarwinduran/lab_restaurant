@@ -55,6 +55,7 @@ onMounted(() => {
             <th scope="col">Direccion</th>
             <th scope="col">Nombre del Producto</th>
             <th scope="col">Cantidad</th>
+            <th scope="col">Fecha de pedido</th>
           </tr>
         </thead>
         <tbody>
