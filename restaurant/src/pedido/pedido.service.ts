@@ -25,7 +25,7 @@ export class PedidoService {
     return this.pedidoRepository.save({
       nombreProducto: createPedidoDto.nombreProducto.trim(),
       direccion:createPedidoDto.direccion.trim(),
-      cantidad:createPedidoDto.cantidad
+      cantidad:createPedidoDto.cantidad,
     });
   }
 

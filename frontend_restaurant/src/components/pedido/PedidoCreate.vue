@@ -31,44 +31,44 @@ function goBack() {
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><RouterLink to="/">Inicio</RouterLink></li>
         <li class="breadcrumb-item">
-          <RouterLink to="/pedido">Pedidos</RouterLink>
+          <RouterLink to="/pedido">Pedido</RouterLink>
         </li>
-        <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        <li class="breadcrumb-item active" aria-current="page">Crear</li>
       </ol>
     </nav>
 
     <div class="row">
-      <h2>Editar Pedido</h2>
+      <h2>Crear Nuevo Pedido</h2>
     </div>
 
     <div class="row">
       <form @submit.prevent="crearPedido">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" v-model="direccion" placeholder="Direccion" required />
-          <label for="nombre">Direccion</label>
+          <input type="text" class="form-control" v-model="direccion" placeholder="direccion" required />
+          <label for="direccion">Direccion</label>
         </div>
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
             v-model="nombreProducto"
-            placeholder="Nombre del pedido"
+            placeholder="nombreProducto"
             required
           />
-          <label for="nacionalidad">Nombre del pedido</label>
+          <label for="nombreProducto">Nombre del producto</label>
         </div>
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
             v-model="cantidad"
-            placeholder="Cantidad"
+            placeholder="cantidad"
             required
           />
-          <label for="nacionalidad">Cantidad</label>
+          <label for="cantidad">Cantidad</label>
         </div>
         <div class="text-center mt-3">
-          <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+          <button type="submit" class="btn btn-primary btn-lg">Crear</button>
         </div>
       </form>
     </div>

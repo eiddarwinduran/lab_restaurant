@@ -13,6 +13,7 @@ export class CreatePedidoDto {
     @IsNumber({})
     readonly cantidad:number;
 
+
     @ApiProperty()
     @IsNotEmpty({message:'el campo de direccion no debe estar vacion'})
     @IsString({ message: 'El campo de deireccion debe ser de tipo cadena' })
