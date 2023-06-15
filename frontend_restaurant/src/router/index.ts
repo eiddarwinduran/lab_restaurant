@@ -10,6 +10,19 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/pedido',
+      name: 'pedido',
+      component: () => import('../views/PedidoView.vue'),
+      children: [
+      { path: '', component: () => import('../components/pedido/PedidoList.vue') },
+      { path: 'crear', component: () => import('../components/pedido/PedidoCreate.vue') },
+      {
+        path: 'editar/:id',
+        component: () => import('../components/pedido/PedidoEdit.vue')
+      }
+      ]
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

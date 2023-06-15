@@ -15,6 +15,6 @@ export class UsuarioEntity {
   @Column({ length: 50 })
   email: string;
 
-  @OneToMany(() => PedidoEntity, pedido => pedido.usuarios)
-  pedido: PedidoEntity[]; //estamos en avance 
+  //@OneToMany(() => PedidoEntity, pedido => pedido.usuarios)
+ // pedido: PedidoEntity[]; //estamos en avance 
 }
