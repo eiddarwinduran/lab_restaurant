@@ -81,12 +81,13 @@ onMounted(() => {
           <label for="cantidad">Cantidad</label>
         </div>
         <div class="text-center mt-3">
-          <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+          <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-file-earmark-post-fill"></i></button>
+          
         </div>
       </form>
     </div>
     <div class="text-left">
-      <button class="btn btn-link" @click="goBack">Volver</button>
+      <button class="btn btn-primary btn-lg" @click="goBack" ><i class="bi bi-arrow-90deg-left"></i></button>
     </div>
   </div>
 </template>

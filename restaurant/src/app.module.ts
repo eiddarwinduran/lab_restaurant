@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsuarioModule } from './usuario/usuario.module';
 import { PedidoModule } from './pedido/pedido.module';
+import { MenuModule } from './menu/menu.module';
 
 
 @Module({
@@ -24,6 +25,7 @@ import { PedidoModule } from './pedido/pedido.module';
 
     PedidoModule,
     UsuarioModule,
+    MenuModule,
   ],
   controllers: [AppController],
   providers: [AppService],

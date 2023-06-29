@@ -1,7 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <RouterView ENDPOINT_API="pedido"></RouterView>
+  <div class="container">
+    <RouterView ENDPOINT_API="pedido"></RouterView>
+  </div>
 </template>
 
-<style></style>
+<style scoped>
+.container {
+  margin-top: 6rem;
+}
+</style>

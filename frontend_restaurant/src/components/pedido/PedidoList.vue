@@ -65,8 +65,8 @@ onMounted(() => {
             <td>{{ pedidos.nombreProducto}}</td>
             <td>{{ pedidos.cantidad}}</td>
             <td>
-              <button class="btn btn-link" @click="toEdit(pedidos.id)">Editar</button>
-              <button class="btn btn-link" @click="toDelete(pedidos.id)">Cancelar</button>
+              <button class="btn btn-link" @click="toEdit(pedidos.id)" ><i class="bi bi-pencil-fill"></i></button>
+              <button class="btn btn-link" @click="toDelete(pedidos.id)" ><i class="bi bi-trash3"></i></button>
             </td>
           </tr>
         </tbody>

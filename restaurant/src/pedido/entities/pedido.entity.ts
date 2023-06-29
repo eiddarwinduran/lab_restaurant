@@ -7,7 +7,7 @@ export class PedidoEntity {
   id: number;
   
   //@Column({name: 'id_usuario'})
-  idUsuario:string;
+  //idUsuario:string;
 
   @Column()
   direccion: string;

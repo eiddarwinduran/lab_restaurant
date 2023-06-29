@@ -6,7 +6,7 @@ export class PedidoEntity {
   @PrimaryGeneratedColumn()
   id: number;
   
-  //@Column({name: 'id_usuario'})
+  @Column({name: 'id_usuario'})
   //idUsuario:string;
 
   @Column()
