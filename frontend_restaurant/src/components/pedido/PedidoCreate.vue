@@ -8,13 +8,14 @@ const props = defineProps<{
 }>()
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
+const nombreC = ref('')
 const direccion = ref('')
 const nombreProducto = ref('')
 const cantidad = ref('')
 
 async function crearPedido() {
   await http
-    .post(ENDPOINT, { direccion: direccion.value,
+    .post(ENDPOINT, { nombreC: nombreC.value,direccion: direccion.value,
       nombreProducto: nombreProducto.value,
       cantidad: cantidad.value })
     .then(() => router.push('/pedido'))
@@ -59,6 +60,16 @@ function goBack() {
         </div>
         <div class="form-floating">
           <input
+            type="text"
+            class="form-control"
+            v-model="nombreC"
+            placeholder="nombreC"
+            required
+          />
+          <label for="nombreC">Nombre Cliente</label>
+        </div>
+        <div class="form-floating">
+          <input
             type="number"
             class="form-control"
             v-model="cantidad"
@@ -67,6 +78,7 @@ function goBack() {
           />
           <label for="cantidad">Cantidad</label>
         </div>
+        
         <div class="text-center mt-3">
           <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-file-earmark"></i></button>
         </div>

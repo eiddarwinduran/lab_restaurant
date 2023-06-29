@@ -1,4 +1,4 @@
-import { UsuarioEntity } from "src/usuario/entities/usuario.entity";
+
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('pedidos')
@@ -6,8 +6,10 @@ export class PedidoEntity {
   @PrimaryGeneratedColumn()
   id: number;
   
-  //@Column({name: 'id_usuario'})
-  //idUsuario:string;
+  //@Column({name: 'id_platillos'})
+  //idPlatillo:number;
+  @Column()
+  nombreC:string;
 
   @Column()
   direccion: string;
@@ -18,10 +20,11 @@ export class PedidoEntity {
   @Column()
   cantidad:number;
 
+
   @CreateDateColumn({ name: 'fecha_pedido' })
   fechaPedido: Date;
 
-  //@ManyToOne(() => UsuarioEntity, (usuarios) => usuarios.pedido)
-  //@JoinColumn({ name: 'id_usuario', referencedColumnName: 'id' })
-  //usuarios: UsuarioEntity;
+  //@ManyToOne(() => PlatilloEntity, (platillo) => platillo.pedido)
+  //@JoinColumn({ name: 'idPlatillo', referencedColumnName: 'id' })
+  //platillo: PlatilloEntity;
 }

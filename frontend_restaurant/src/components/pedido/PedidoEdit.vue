@@ -8,6 +8,7 @@ const props = defineProps<{
 }>()
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
+const nombreC = ref('')
 const direccion = ref('')
 const nombreProducto = ref('')
 const cantidad = ref('')
@@ -16,6 +17,7 @@ const id = router.currentRoute.value.params['id']
 async function editarPedido() {
   await http
     .patch(`${ENDPOINT}/${id}`, {
+      nombreC: nombreC.value,
       direccion: direccion.value,
       nombreProducto: nombreProducto.value,
       cantidad: cantidad.value
@@ -25,7 +27,7 @@ async function editarPedido() {
 
 async function getPedido() {
   await http.get(`${ENDPOINT}/${id}`).then((response) => {
-    ;(direccion.value = response.data.direccion), (nombreProducto.value = response.data.nombreProducto),(cantidad.value = response.data.cantidad)
+    ;(nombreC.value=response.data.nombreC),(direccion.value = response.data.direccion), (nombreProducto.value = response.data.nombreProducto),(cantidad.value = response.data.cantidad)
   })
 }
 
@@ -42,10 +44,7 @@ onMounted(() => {
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><RouterLink to="/">Inicio</RouterLink></li>
-        <li class="breadcrumb-item">
-          <RouterLink to="/pedido">Pedidos</RouterLink>
-        </li>
+        
         <li class="breadcrumb-item active" aria-current="page">Editar</li>
       </ol>
     </nav>
@@ -69,6 +68,16 @@ onMounted(() => {
             required
           />
           <label for="nombreProducto">Nombre del pedido</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            v-model="nombreC"
+            placeholder="NombreC"
+            required
+          />
+          <label for="nombreC">Nombre Cliente</label>
         </div>
         <div class="form-floating">
           <input

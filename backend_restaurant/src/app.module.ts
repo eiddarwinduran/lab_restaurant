@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { PedidoModule } from './pedido/pedido.module';
 import { PlatillosModule } from './platillos/platillos.module';
+import { RepartidorModule } from './repartidor/repartidor.module';
 
 
 @Module({
@@ -25,9 +26,10 @@ import { PlatillosModule } from './platillos/platillos.module';
     }),
 
     PedidoModule,
-    UsuarioModule,
     PlatillosModule,
+    UsuarioModule,
     AuthModule,
+    RepartidorModule,
     
   ],
   controllers: [AppController],
