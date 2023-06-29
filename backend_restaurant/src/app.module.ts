@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { PedidoModule } from './pedido/pedido.module';
+import { PlatillosModule } from './platillos/platillos.module';
 
 
 @Module({
@@ -25,7 +26,9 @@ import { PedidoModule } from './pedido/pedido.module';
 
     PedidoModule,
     UsuarioModule,
+    PlatillosModule,
     AuthModule,
+    
   ],
   controllers: [AppController],
   providers: [AppService],
